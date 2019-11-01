@@ -12,7 +12,6 @@ const entryTopics = document.querySelector('.topics');
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics")
     .then(response => {
-        console.log(response.data.topics);
         response.data.topics.forEach(item => {
             let tempVal = document.createElement('div');
             tempVal.classList.add('tab');
